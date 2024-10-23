@@ -64,6 +64,7 @@ jobs:
           echo "DISTRO=${DISTRO}"
           echo "QCOM_SELECTED_BSP=${QCOM_SELECTED_BSP}"
           echo "custom build cmd = ${{github.event.inputs.custom_build_cmd}}"
+          echo "DL_DIR: $DL_DIR"
 
       # - name: Checkout repo
       #   uses: actions/checkout@v4
