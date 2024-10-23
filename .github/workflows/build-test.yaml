@@ -51,7 +51,6 @@ jobs:
   full-build:
     runs-on: ubuntu-latest
     timeout-minutes: 720
-    name: $MACHINE.$DISTRO.$QCOM_SELECTED_BSP
 
     steps:
       - name: Prints
@@ -73,7 +72,7 @@ jobs:
         run: |
           if [ ! -d ${DL_DIR} ];then
             echo "Creating ${DL_DIR}!"
-            mkdir -p ${DL_DIR}
+            mkdir -p ${DL_DIR} || echo "Can not create ${DL_DIR}!"
           fi
 
       # - name: Sync source tree
